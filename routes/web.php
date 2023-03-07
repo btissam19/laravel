@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FirstController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +15,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/about',function(){
-    return view('about');
-    // creating a route to new file about ;
-});
+
+Route::get('/',[FirstController::class ,'index'])->name('home.index');
+Route::get('/about',[FirstController::class ,'about'])->name('home.about');
+Route::get('/contact', [FirstController::class ,'contact'])->name('home.contact');
+//all is definned in FirstController classe so here we just appel the name of claase and the methode in get methode
+
+// Route::get('/about',function(){
+    // return view('about');
+    // // creating a route to new file about ;
+// });
+// Route::get('/about/about',function(){
+    // return view('about');
+    // // creating a route to new file about ;
+// });
+// Route::get('/contact',function(){
+    // return view('contact');
+    // // creating a route to new file about ;
+// });
+
+
+
+
 // request with ?namvariable=
 route::get('/about',function(){
     $filter=request('learn');
@@ -30,7 +47,7 @@ route::get('/about',function(){
     // but by this methode we can passe script tags and due to this we can we can damange the website and for this reason we will use this function
     return  'you are going to leran '.strip_tags($filter).'  here';
     }
-    return 'hi bassoma enjoy laravel now';
+    return view('about');
     // if the user don't set any value we gonna show to him the home page to choose from
 
 }
