@@ -7,7 +7,7 @@
 
         <title>Laravel with bassoma @yield('title') </title>
         <link rel="stylesheet" href="css/style.css">
-        <!-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> -->
+         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link rel="stylesheet" href="{{ url('css/style.css') }}">
         <!-- for make style css for each file we create in route and its connect with first diroctory 
     and for link this we have create fille of style css in public dirctory -->
@@ -33,13 +33,14 @@
         <a href="{{route('home.index')}}">Home</a>
         <a href="{{route('home.about')}}">About</a>
         <a href="{{route('home.contact')}}">Contact</a>
+        <a href="{{route('computer.index')}}">Computer</a>
+        <a href="{{route('computer.create')}}">Create</a>
+       
+       
     </nav>
-    <!--we creat this page for removing repitition pub
-    and make cnges easy to do it and ts this is purpose of oriented object  programing -->
    </div>  
    <div class="max-w-7xl mx-auto p-6 lg:p-8 text-center align-items-center justify-content-center " style="margin: top 10px;">
    @yield('content')  
-   <!-- thIS function we place it in thE place of specifique content -->
    </div>  
             
     </body>
