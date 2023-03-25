@@ -5,3 +5,43 @@ body nav a{
     margin-top:200px;
     font-weight: bolder;
     }
+li{
+  background-color: antiquewhite;
+  padding:5px;
+  width:500px;
+  margin: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  border:1px solid;
+  border-radius: 5px;
+}
+li:hover{
+  background-color: rgb(68, 171, 171);
+}
+button[type="submit"]:hover {
+  background-color: #4c6ef5;
+}
+form{
+  background-color: aliceblue;
+  border:1px solid wheat;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px beige;
+  width: 500px;
+  margin: auto;
+}
+form div {
+  margin:10px;
+}
+form input{
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+form label{
+   display: inherit;
+   padding-bottom: 3px;
+   color: #9d9d9d;
+}
